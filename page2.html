@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bathil Solum</title>
+
+<style>
+
+body{
+    background-color:pink;
+    font-family:Arial;
+    padding:40px;
+    color:white;
+}
+
+/* Questions aligned from left */
+.question-box{
+    text-align:left;
+    margin-bottom:40px;
+}
+
+/* Buttons */
+button{
+    padding:12px 24px;
+    margin-top:10px;
+    margin-right:10px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* Yes Button */
+.yes-btn{
+    background-color:#ff1493;
+    color:white;
+}
+
+/* No Button */
+.no-btn{
+    background-color:white;
+    color:#ff1493;
+}
+.romba-btn{
+    background-color:#ff1493;
+    color:white;
+}
+.konjam-btn{
+    background-color:white;
+    color:#ff1493;
+}
+
+/* Result Text */
+.result{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Submit Button */
+.submit-btn{
+    background-color:red;
+    color:white;
+    font-size:20px;
+    padding:15px 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center;">❤️ unkita onu kekanum ❤️</h1>
+
+<form action="https://formspree.io/f/mzdwplkw" method="POST">
+
+<!-- Question 1 -->
+<div class="question-box">
+
+<h2>1. Pudichirukaa? 😊</h2>
+
+<button type="button" class="yes-btn"
+onclick="showResult(this,'result1','bujji ❤️','q1','Yes')">
+Yes
+</button>
+
+<button type="button" class="no-btn"
+onclick="showResult(this,'result1','poda 💔','q1','No')">
+No
+</button>
+
+<input type="hidden" name="Question 1" id="q1">
+
+<div id="result1" class="result"></div>
+
+</div>
+
+<!-- Question 2 -->
+<div class="question-box">
+
+<h2>2. Evlo pudichiruku ? 🌸</h2>
+
+<button type="button" class="romba-btn"
+onclick="showResult(this,'result2',' 🫂','q2','romba')">
+romba
+</button>
+
+<button type="button" class="konjam-btn"
+onclick="showResult(this,'result2','na aluven 😢','q2','konjam')">
+konjam
+</button>
+
+<input type="hidden" name="Question 2" id="q2">
+
+<div id="result2" class="result"></div>
+
+</div>
+
+<!-- Question 3 -->
+<div class="question-box">
+
+<h2>3. Ena epovacham miss panirukiya? 💕</h2>
+
+<button type="button" class="yes-btn"
+onclick="showResult(this,'result3','So sweet ❤️','q3','Yes')">
+Yes
+</button>
+
+<button type="button" class="no-btn"
+onclick="showResult(this,'result3','I will make you miss me 😌','q3','No')">
+No
+</button>
+
+<input type="hidden" name="Question 3" id="q3">
+
+<div id="result3" class="result"></div>
+
+</div>
+
+<!-- Question 4 -->
+<div class="question-box">
+
+<h2>4. Na unaku special ah ? ✨</h2>
+
+<button type="button" class="yes-btn"
+onclick="showResult(this,'result4','You made my day 💖','q4','Yes')">
+Yes
+</button>
+
+<button type="button" class="no-btn"
+onclick="showResult(this,'result4','I will become special soon 😄','q4','No')">
+No
+</button>
+
+<input type="hidden" name="Question 4" id="q4">
+
+<div id="result4" class="result"></div>
+
+</div>
+
+<!-- Question 5 -->
+<div class="question-box">
+
+<h2>5. Enoda epaium irupiya? ❤️</h2>
+
+<button type="button" class="yes-btn"
+onclick="showResult(this,'result5','Forever ❤️','q5','Yes')">
+Yes
+</button>
+
+<button type="button" class="no-btn"
+onclick="showResult(this,'result5','That’s okay 🥺','q5','No')">
+No
+</button>
+
+<input type="hidden" name="Question 5" id="q5">
+
+<div id="result5" class="result"></div>
+
+</div>
+
+<!-- Submit Button -->
+<div style="text-align:center;">
+
+<button type="submit" class="submit-btn">
+mudichikalam ❤️
+</button>
+
+</div>
+
+</form>
+
+<script>
+
+function showResult(button, resultId, message, inputId, answer){
+
+    /* Show Result */
+    document.getElementById(resultId).innerHTML = message;
+
+    /* Store Answer */
+    document.getElementById(inputId).value = answer;
+
+    /* Disable Buttons */
+    let parent = button.parentElement;
+    let buttons = parent.getElementsByTagName("button");
+
+    for(let i = 0; i < buttons.length; i++){
+
+        buttons[i].disabled = true;
+        buttons[i].style.opacity = "0.6";
+        buttons[i].style.cursor = "not-allowed";
+    }
+}
+
+</script>
+
+</body>
+</html>
