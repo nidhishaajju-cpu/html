@@ -1,4 +1,4 @@
-# ❤️ Love Questions Website
+ Questions Website
 
 A cute romantic question website created using HTML, CSS, and JavaScript.
 
